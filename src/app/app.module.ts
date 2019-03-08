@@ -5,6 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AgendaComponent } from './agenda/agenda.component';
+import { HuiswerkComponent } from './huiswerk/huiswerk.component';
+import { RegisterComponent } from './register/register.component';
+import { UserComponent } from './user/user.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +20,11 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AgendaComponent,
+    HuiswerkComponent,
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
