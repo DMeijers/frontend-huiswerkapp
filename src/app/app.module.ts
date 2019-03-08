@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  // { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   // { path: '**', component: PageNotFoundComponent }
 ];
 
