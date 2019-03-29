@@ -3,18 +3,19 @@
   <p class="lead">Fill in your email and password</p>
 </div>
 <div class="container col-4 bg-light p-3 rounded">
+    <div *ngIf="alert" class="alert alert-danger" role="alert" >
+        <button type="button" class="close" aria-label="Close" (click)="alert = false">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div>Wrong email/password</div>
+    </div>
+<!--    <div *ngIf="alert" class="alert alert-danger" role="alert" ><ul><li class="float-left list-unstyled">Wrong email/password</li><li class="dismiss float-right list-unstyled" (click)="alert = false">X</li></ul></div>-->
     <div class="form-group align-items-center align-middle">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" [(ngModel)]="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    <!--</div>
-    <div class="form-group col-6">-->
       <label for="exampleInputPassword1">Password</label>
       <input type="password" [(ngModel)]="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
       <button type="submit" (click)="submit()" class="btn btn-primary mt-4">Log in</button>
     </div>
-    <!--<div class="form-check col-6 justify-content-center">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>-->
 </div>

@@ -9,8 +9,9 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
     email: string;
     password: string;
+    alert: boolean;
 
-    login = {
+    adminData = {
         id: 1,
         voornaam: 'berend',
         achternaam: 'lijer',
@@ -29,11 +30,11 @@ export class LoginComponent implements OnInit {
     }
 
     submit() {
-        // this.router.navigate(['/'])
-        console.log(
-            {
-                email: this.email,
-                password: this.password
-            });
+        if (this.email === this.adminData.email && this.password === this.adminData.wachtoord) {
+            // this.router.navigateByUrl('/admin');
+            this.router.navigate(['/admin']);
+        } else {
+            this.alert = true;
+        }
     }
 }
