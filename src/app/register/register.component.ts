@@ -26,7 +26,6 @@ export class RegisterComponent implements OnInit {
     this.http.get(environment.url + '/api/users').subscribe(
         data => console.log(data)
     );
-    this.http
     this.http.post(environment.url + '/api/users', user).subscribe(
         data => console.log(data),
         error => console.log(error)
