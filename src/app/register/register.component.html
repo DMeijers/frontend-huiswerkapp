@@ -3,11 +3,12 @@
     <p class="lead">Make your account here</p>
 </div>
 <div>
-    <form class="container col-7 bg-light p-3 rounded">
+    <div class="container col-7 bg-light p-3 rounded">
         <div class="form-row">
             <div class="form-group col-6">
                 <label for="inputFirstName1">First Name</label>
-                <input type="text" class="form-control" id="inputFirstName1" placeholder="First Name">
+                <input type="text" [(ngModel)]="username" class="form-control" id="inputFirstName1" placeholder="First Name">
+                {{username}}
             </div>
             <div class="form-group col-6">
                 <label for="inputLastName1">Last Name</label>
@@ -41,15 +42,17 @@
         <div class="form-row">
             <div class="form-group col-6">
                 <label for="inputEmail2">Email Address</label>
-                <input type="email" class="form-control" id="inputEmail2" placeholder="Email">
+                <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail2" placeholder="Email">
+                {{email}}
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-6">
                 <label for="inputPassword2">Password</label>
-                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                <input type="password" class="form-control" [(ngModel)]="password" id="inputPassword2" placeholder="Password">
+                {{password}}
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
-    </form>
+        <button type="submit" class="btn btn-primary" (click)="registerUser()">Sign in</button>
+    </div>
 </div>
