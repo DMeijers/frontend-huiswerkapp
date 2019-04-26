@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {CookieService} from 'ngx-cookie-service';
 
 import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
@@ -42,7 +43,7 @@ const appRoutes: Routes = [
         HttpClientModule,
         RouterModule.forRoot(appRoutes)
     ],
-    providers: [],
+    providers: [ CookieService ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
